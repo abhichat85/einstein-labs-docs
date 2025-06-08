@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 53 93% 94%;
+  --foreground: 200 23% 18%;
+
+  --card: 53 93% 94%;
+  --card-foreground: 200 23% 18%;
+
+  --popover: 53 93% 94%;
+  --popover-foreground: 200 23% 18%;
+
+  --primary: 17 100% 51%;
+  --primary-foreground: 53 93% 94%;
+
+  --secondary: 185 85% 18%;
+  --secondary-foreground: 53 93% 94%;
+
+  --muted: 196 8% 84%;
+  --muted-foreground: 200 23% 18%;
+
+  --accent: 45 83% 72%;
+  --accent-foreground: 200 23% 18%;
+
+  --destructive: 17 100% 51%;
+  --destructive-foreground: 53 93% 94%;
+
+  --border: 196 8% 84%;
+  --input: 196 8% 84%;
+  --ring: 185 85% 18%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 200 23% 18%;
+  --foreground: 53 93% 94%;
+
+  --card: 200 23% 18%;
+  --card-foreground: 53 93% 94%;
+
+  --popover: 200 23% 18%;
+  --popover-foreground: 53 93% 94%;
+
+  --primary: 17 100% 51%;
+  --primary-foreground: 53 93% 94%;
+
+  --secondary: 185 85% 18%;
+  --secondary-foreground: 53 93% 94%;
+
+  --muted: 196 8% 24%;
+  --muted-foreground: 196 8% 84%;
+
+  --accent: 45 83% 72%;
+  --accent-foreground: 200 23% 18%;
+
+  --destructive: 17 100% 51%;
+  --destructive-foreground: 53 93% 94%;
+
+  --border: 196 8% 24%;
+  --input: 196 8% 24%;
+  --ring: 185 85% 18%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for documentation */
+.docs-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.docs-header {
+  @apply bg-secondary text-white py-12;
+}
+
+.docs-nav {
+  @apply bg-gunmetal text-white py-4;
+}
+
+.docs-sidebar {
+  @apply bg-light-silver bg-opacity-20 p-4 rounded-lg;
+}
+
+.docs-content {
+  @apply py-8;
+}
+
+.docs-footer {
+  @apply bg-gunmetal text-white py-8 mt-12;
+}
+
+/* Code block styling */
+pre {
+  @apply bg-gunmetal text-white p-4 rounded-lg overflow-x-auto my-4;
+}
+
+code {
+  @apply bg-light-silver bg-opacity-30 px-1 py-0.5 rounded text-gunmetal;
+}
+
+pre code {
+  @apply bg-transparent text-white p-0;
+}
+
+/* Admonitions */
+.admonition {
+  @apply border-l-4 p-4 my-4 rounded-r-lg;
+}
+
+.admonition.note {
+  @apply border-midnight-green bg-light-silver bg-opacity-30;
+}
+
+.admonition.warning {
+  @apply border-orange-pantone bg-sand-yellow bg-opacity-30;
+}
+
+.admonition.tip {
+  @apply border-sand-yellow bg-sand-yellow bg-opacity-20;
+}
